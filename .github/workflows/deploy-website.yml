@@ -1,23 +1,17 @@
 name: Deploy Website
-
 on:
   push:
     branches:
       - main
-
 permissions:
   contents: write
-
 jobs:
   deploy:
-    concurrency:
-      group: ci-${{ github.ref }}
-      cancel-in-progress: true
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@v6
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
