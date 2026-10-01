@@ -1,4 +1,22 @@
-/* Card components: .card-group, .cards grid, .card, .card-tag, .card-footer
-   Use native nesting. Reference tokens with var(). */
+.nav-list {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
 
-/* TODO: Style the card components */
+  .nav-link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    /* Requirement: :not() used to style links that are not the current page */
+    &:not(.is-active):hover {
+      color: var(--color-primary);
+    }
+
+    /* Requirement: :focus-visible for keyboard navigation only */
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+    }
+  }
+}
