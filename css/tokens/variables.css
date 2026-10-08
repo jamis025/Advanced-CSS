@@ -1,1 +1,14 @@
+:root {
+    /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
 
+    /* Typography */
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-size-base: 1rem;
+
+    /* Borders */
+  --radius-card: 0.75rem;
+  --radius-tag: 0.25rem;
+}
