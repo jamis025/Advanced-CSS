@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build:css": "esbuild css/main.css --bundle --minify --outfile=dist/styles.css"
+  }
+}
