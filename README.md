@@ -6,7 +6,7 @@
 This repository is my portfolio for WDD 331R: Advanced CSS.
 Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
-every push to main.
+every push to main. The site now supports dark mode and the color tokens now live in the tokens file but can now be called to whatever page I put the retrieval code. 
 ## Pages
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
