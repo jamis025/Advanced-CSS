@@ -21,6 +21,9 @@
         </label>
     </div>
 </details>
+<script src="js/theme-preference.js"></script>
+<link rel="stylesheet" href="css/main.css">
+
 *,
 *::before,
 *::after {
