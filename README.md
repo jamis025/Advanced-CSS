@@ -11,3 +11,5 @@ every push to main. The site now supports dark mode and the color tokens now liv
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/layered-components/index.html)
+- [Editorial](unit-4/grid-layouts/editorial.html)
+- [Cards](unit-4/grid-layouts/cards.html)
