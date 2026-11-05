@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Sticky Demo</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
 
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: visible; 
+
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .sticky-header {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0; 
+            background-color: #3b82f6;
+            color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10; 
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .extra-scroll-space {
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffffff, #e0e7ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6366f1;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <header>
+            <h1>CSS position: sticky; Demonstration</h1>
+            <p>Scroll down to see the section header lock into place at the top of the viewport.</p>
+        </header>
+
+        <section class="content-section">
+            <h2 class="sticky-header">📌 Important Featured Section</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elementum, ex ut accumsan tristique, ligula ante scelerisque elit, ac efficitur turpis diam nec diam. Duis vestibulum dictum sem, vestibulum pellentesque urna. Aliquam nec sem mi. Curabitur vitae eleifend orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            
+            <p>Nullam efficitur maximus erat, at sollicitudin sapien. Cras elementum ipsum ac lacinia aliquet. Mauris nec ante mollis, commodo nunc ac, accumsan tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ac magna id urna sollicitudin egestas. In convallis rhoncus erat, non efficitur leo.</p>
+
+            <p>Sed id nisi tellus. Proin ac mauris non massa feugiat aliquet ac et dui. Curabitur sed nisl nec erat tempus iaculis. Etiam pulvinar faucibus lorem, id tincidunt ante elementum id. Sed nec congue ante, vel luctus sem. Ut tristique interdum rhoncus. Suspendisse rhoncus mi eu felis vehicula elementum.</p>
+
+            <p>Nam cursus volutpat nisi, id scelerisque leo egestas at. Mauris ac lacinia ex, vitae bibendum urna. Phasellus non lectus non ligula porttitor elementum. Duis tempus lobortis turpis ac porta. Sed non sem tincidunt, viverra odio eget, facilisis sem. Curabitur molestie ex a lectus commodo luctus.</p>
+        </section>
+
+        <div class="extra-scroll-space">
+            Keep scrolling... The sticky element released because its parent container left the screen!
+        </div>
+    </div>
+
+</body>
+</html>
