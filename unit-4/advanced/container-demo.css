@@ -1,1 +1,44 @@
+.wrapper {
+  container-type: inline-size;
+  container-name: component-container; 
+  width: 100%;
+}
 
+.component {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.component-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@container component-container (min-width: 500px) {
+  .component {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  .component-image {
+    width: 150px; 
+  }
+}
+
+@container component-container (min-width: 800px) {
+  .component {
+    background-color: #e0f2fe; 
+    padding: 2rem;
+  }
+  
+  .component-title {
+    font-size: 1.5rem;
+    color: #0369a1;
+  }
+}
