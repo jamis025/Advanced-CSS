@@ -3,16 +3,35 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
+  
+  grid-template-rows: repeat(auto-fit, max-content 1fr min-content);
+  
+  align-items: stretch; 
 }
 
 .card {
   display: grid;
-  grid-template-rows: 160px 1fr; 
+  grid-template-rows: 160px 1fr;
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card > div:not([aria-hidden="true"]) {
+  grid-row: span 3;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .card-grid {
+    row-gap: 2rem;
+  }
+  
+  .card > div:not([aria-hidden="true"]) {
+    grid-template-rows: subgrid;
+    gap: 0; 
+  }
 }
 
 .card:hover {
@@ -45,7 +64,7 @@
 }
 
 .card a {
-  width: fit-content(150px); 
+  width: fit-content(150px);
   text-decoration: none;
   background-color: #667eea;
   color: #ffffff;
