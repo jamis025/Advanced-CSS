@@ -15,3 +15,5 @@ every push to main. The site now supports dark mode and the color tokens now liv
 - [Cards](unit-4/grid-layouts/cards.html)
 - [Container](unit-4/advanced/container-demo.html)
 - [Sticky-demo](unit-4/advanced/sticky-demo.html)
+- [Resume](resume.html)
+- [Contact](contact.html)
