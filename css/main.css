@@ -54,3 +54,45 @@ a {
 a:hover {
     color: var(--color-primary-hover);
 }
+
+@media print {
+  .site-header,
+  .site-footer,
+  nav,
+  button {
+    display: none !important;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif; /* Or a clean print sans-serif */
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; border-bottom: 1pt solid #ccc; }
+  h3 { font-size: 12pt; }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #444;
+  }
+
+  .resume-entry,
+  section {
+    break-inside: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+    
+  .resume-header {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
