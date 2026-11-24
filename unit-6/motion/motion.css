@@ -1,0 +1,112 @@
+.status-badge {
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  nav a:not(.nav-cta) {
+    transition-property: color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
+
+  nav a:not(.nav-cta):hover,
+  nav a:not(.nav-cta):focus-visible {
+    color: var(--color-accent, #2563eb);
+    transform: translateY(-1px);
+  }
+
+  .nav-cta {
+    transition-property: background-color, color, transform, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary {
+    transition-property: background-color, transform, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  .btn-secondary {
+    transition-property: background-color, border-color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    transform: translateY(-1.5px);
+  }
+
+  .btn-ghost {
+    transition-property: background-color, color, opacity;
+    transition-duration: 180ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost:focus-visible {
+    opacity: 0.85;
+  }
+
+  .card {
+    transition-property: transform, box-shadow, border-color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-link {
+    display: inline-block;
+    transition-property: color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
+
+  .card-link:hover,
+  .card-link:focus-visible {
+    transform: translateX(4px);
+  }
+
+  @keyframes status-pulse {
+    0% {
+      opacity: 0.75;
+      transform: scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+  }
+
+  .status-badge {
+    animation-name: status-pulse;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
